@@ -1,0 +1,15 @@
+class Solution(object):
+    def addSpaces(self, s, spaces):
+        """
+        :type s: str
+        :type spaces: List[int]
+        :rtype: str
+        """
+        modifiedString = []
+        lastIndex = 0
+        for index in spaces:
+            modifiedString.append(s[lastIndex:index] + " ")
+            lastIndex = index
+        modifiedString.append(s[lastIndex:])
+        return "".join(modifiedString)
+        
